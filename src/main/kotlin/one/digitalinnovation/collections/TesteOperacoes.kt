@@ -8,13 +8,25 @@ fun main(){
     }
 
     println("---------------------------------")
-    println("Maior Salário: ${salarios.max()}")
-    println("Menor Salário: ${salarios.min()}")
+    //max e min não funcionaram pois estão descontinuados na versão atual do kotlin
+    //println("Maior Salário: ${salarios.max()}")
+    //println("Menor Salário: ${salarios.min()}")
     println("Média de Salarial: ${salarios.average()}")
 
     val salariosMaiorQue2500 = salarios.filter { it > 2500.0 }
 
+    println(salariosMaiorQue2500)
     println("---------------------------------")
 
-    salariosMaiorQue2500.forEach { println(it) }
+    println(salarios.count{it in 2000.0..5000.0})
+
+    println("---------------------------------")
+
+    println(salarios.find{it == 2250.0})
+    println(salarios.find{it == 500.0})
+
+    println("---------------------------------")
+
+    println(salarios.any{it == 2250.0})
+    println(salarios.any{it == 500.0})
 }
