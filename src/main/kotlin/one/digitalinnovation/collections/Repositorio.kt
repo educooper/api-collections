@@ -9,5 +9,7 @@ class Repositorio<T> {
     }
 
     fun findById(id: String) = map[id]
+    
+    fun findAll = map.values
 
 }
